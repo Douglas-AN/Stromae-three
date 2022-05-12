@@ -116,8 +116,8 @@ class App {
                 
                 var compt = (pointsObject.name.substr(6) - 1);
                 console.log(stromae[compt].track);
-                var audio = new Audio(DOMAIN_URL + "/dist/assets/media"+stromae[compt].url);
-                console.log(DOMAIN_URL + "/dist/assets/media"+stromae[compt].url);
+                var audio = new Audio("/"+stromae[compt].url);
+                console.log(DOMAIN_URL + "/"+stromae[compt].url);
                 //console.log(audio)
                 audio.play();
             })
