@@ -1,3 +1,4 @@
+
 import {
     Clock,
     Group,
@@ -17,6 +18,7 @@ import { InteractionManager } from "three.interactive";
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import '../style.css';
 import * as data from './stromae.json';
+const DOMAIN_URL = "https://stromae-douglas.netlify.app/";
 var stromae = data.stromae;
 class App {
 
@@ -114,7 +116,7 @@ class App {
                 
                 var compt = (pointsObject.name.substr(6) - 1);
                 console.log(stromae[compt].track);
-                var audio = new Audio("./dist/assets/media"+stromae[compt].url);
+                var audio = new Audio(DOMAIN_URL + "/dist/assets/media"+stromae[compt].url);
                 //console.log(audio)
                 audio.play();
             })
