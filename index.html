@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="FR">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="module" src="./js/main.js"></script>
+</head>
+
+<body>
+
+  <!-- <figure>
+    <figcaption></figcaption>
+    <audio class="reinitialise" id="url-track" controls>
+      Your browser does not support the
+      <code>audio</code> element.
+    </audio>
+  </figure> -->
+
+  <div class="overlay" id="overlay">
+    <div class="popup animated fadeInDown">
+      <h2></h2>
+      
+      <div class="player">
+        <svg width="52" height="52" id='pause'>
+          <circle id="circle" cx="25" cy="25" r="25" stroke-dasharray="157" stroke-dashoffset="0"
+            style="stroke-width:0.5px;stroke:white;" />
+          <line id='line1' x1="19" y1="15" x2="19" y2="35"
+            style="stroke-width:4px;stroke:white;stroke-linecap: round;" />
+          <path id='line2' d="M 33 15 L 33 25 L 33 35" rx="5" ry="5"
+            style="stroke-width:4px;stroke:white;fill:white;stroke-linejoin: round;stroke-linecap: round;">
+            <animate attributeName="d" dur="300ms" from="M 33 15 L 33 25 L 33 35" to="M 19 15 L 35 25 L 19 35"
+              begin="indefinite" fill="freeze" id="from_pause_to_play" />
+          </path>
+          <animate xlink:href="#line2" attributeName="d" dur="300ms" from="M 19 15 L 35 25 L 19 35"
+            to="M 33 15 L 33 25 L 33 35" fill="freeze" id="from_play_to_pause" begin="indefinite" />
+        </svg>
+      </div>
+      
+    </div>
+    
+  </div>
+
+
+</body>
+
+</html>

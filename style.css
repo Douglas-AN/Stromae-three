@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  background: linear-gradient(to top, #ccc, #fff);
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.overlay {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+.popup {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: 100vh;
+}
+
+.popup h3 {
+  font-size: 15px;
+  height: 50px;
+  line-height: 50px;
+  color: black;
+}
+
+.CloseIcon {
+  cursor: pointer;
+}
+
+.player {
+  border: 0.5px solid;
+  background-color: transparent;
+  color: #fff;
+  transition: 0.3s;
+  width: 40%;
+  height: 7vh;
+  margin: 0 auto;
+  margin-top: 2em;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+/* .player:hover {
+  background-color: #fff;
+  color: #000;
+} */
+
+#circle {
+  transition: stroke-dashoffset 300ms ease-in;
+  stroke-dashoffset: 0;
+  fill: none;
+}
+
+#circle.play {
+  stroke-dashoffset: 157;
+}
+
+#pause {
+  margin-right: 0.6em;
+}
+
+.animated {
+  background: linear-gradient(135deg, #0e0d3e, #180f41, #2e1448, #4c1b52, #70275a, #95385f, #b85062, #d46b63, #e98664, #f69e67, #fdaf6a, #ffb56b);
+  background-repeat: no-repeat;
+  background-position: left top;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0.7;
+    transform: translateY(1000px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
